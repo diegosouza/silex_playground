@@ -1,0 +1,20 @@
+<h1>Todo Application</h1>
+
+<form method="post" action="/tasks">
+    <input name="text" type="text" placeholder="type your task here..." />
+    <input type="submit" value="add" />
+</form>
+
+{% if tasks %}
+    <ul>
+        {% for task in tasks %}
+            <form method="post" action="/task/{{ task.id }}">
+                <input type="hidden" name="_method" value="DELETE">
+                <li>{{ task.text }} <input type="submit" value="delete"></li>
+            </form>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No tasks have been found.</p>
+{% endif %}
+
