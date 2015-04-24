@@ -14,10 +14,6 @@ use Todo\Models\Task;
 $app = new Silex\Application();
 $app['debug'] = true;
 
-$app->register(new Silex\Provider\MonologServiceProvider(), array(
-    'monolog.logfile' => __DIR__.'/../app.log',
-));
-
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/../src/views'
 ));
