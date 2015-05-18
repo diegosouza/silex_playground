@@ -2,8 +2,7 @@
     "require": {
         "silex/silex": "~1.2",
         "twig/twig": "~1.18",
-        "respect/relational": "~0.6.1",
-        "monolog/monolog": "~1.13"
+        "respect/relational": "~0.6.1"
     },
 
     "autoload": {
